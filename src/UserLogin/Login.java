@@ -18,6 +18,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class Login extends JFrame {
 
@@ -26,6 +27,7 @@ public class Login extends JFrame {
 	private JTextField txt_ui;
 	private JTextField txt_pw;
 	private JTextField txt_loc;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -118,7 +120,7 @@ public class Login extends JFrame {
 			      
 			      // the mysql insert statement
 			      String query = " insert into user (login_id, user_name, password, location)"
-			        + " values (?,?, ?, ?, ?)";
+			        + " values (?, ?, ?, ?)";
 			 
 			      // create the mysql insert preparedstatement
 			      PreparedStatement preparedStmt = conn.prepareStatement(query);
@@ -133,6 +135,10 @@ public class Login extends JFrame {
 			      {
 			    	  
 			      }
+			      
+			    	  WelcomePage wcpkg = new WelcomePage();
+			    	  wcpkg.setVisible(true);
+			      
 			       
 			      conn.close();
 			    }
@@ -152,6 +158,13 @@ public class Login extends JFrame {
 		panel.setForeground(Color.BLUE);
 		panel.setBounds(10, 37, 293, 213);
 		contentPane.add(panel);
+		
+		passwordField = new JPasswordField();
+		panel.add(passwordField);
+		
+		JLabel lblSigninToAvail = new JLabel("SignUp to Avail VZ Transports");
+		lblSigninToAvail.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblSigninToAvail.setForeground(Color.BLUE);
+		panel.add(lblSigninToAvail);
 	}
-
 }

@@ -90,7 +90,9 @@ public class LoginPage {
 		});
 		btnSignin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-			
+				frame.dispose();
+				WelcomePage wcPg = new WelcomePage();
+				wcPg.setVisible(true);
 			}
 		});
 		btnSignin.setForeground(Color.BLUE);

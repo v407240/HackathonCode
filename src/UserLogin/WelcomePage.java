@@ -42,7 +42,7 @@ public class WelcomePage extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblWelcomeToVz = new JLabel("Welcome to VZ Transports!!!");
+		JLabel lblWelcomeToVz = new JLabel("Welcome to VZ Transports");
 		lblWelcomeToVz.setForeground(Color.BLUE);
 		lblWelcomeToVz.setFont(new Font("Times New Roman", Font.BOLD, 13));
 		lblWelcomeToVz.setBounds(90, 65, 277, 14);
@@ -51,13 +51,25 @@ public class WelcomePage extends JFrame {
 		JButton btnRegisterCar = new JButton("Register Car");
 		btnRegisterCar.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		btnRegisterCar.setForeground(Color.BLUE);
-		btnRegisterCar.setBounds(64, 135, 118, 23);
+		btnRegisterCar.setBounds(38, 135, 118, 23);
 		contentPane.add(btnRegisterCar);
 		
 		JButton btnPoolCab = new JButton("Pool Cab");
 		btnPoolCab.setForeground(Color.BLUE);
 		btnPoolCab.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		btnPoolCab.setBounds(192, 135, 106, 23);
+		btnPoolCab.setBounds(160, 135, 106, 23);
 		contentPane.add(btnPoolCab);
+		
+		JButton btnEmployeePooling = new JButton("Employee Pooling");
+		btnEmployeePooling.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		btnEmployeePooling.setForeground(Color.BLUE);
+		btnEmployeePooling.setBounds(270, 135, 141, 23);
+		contentPane.add(btnEmployeePooling);
+		
+		JLabel lblSuccess = new JLabel("Success!!!");
+		lblSuccess.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		lblSuccess.setForeground(Color.BLUE);
+		lblSuccess.setBounds(89, 40, 67, 14);
+		contentPane.add(lblSuccess);
 	}
 }
